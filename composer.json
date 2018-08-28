@@ -3,7 +3,7 @@
         "linecorp/line-bot-sdk": "^2.3"
     }
     
-     "richmenus": [
+     "richmenus": 
     {
       "richMenuId": "{richMenuId}",
       "size": {
@@ -26,7 +26,7 @@
         }
       ]
     }
-  ]
+  
     
     
 }
