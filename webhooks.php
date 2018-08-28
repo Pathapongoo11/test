@@ -34,29 +34,7 @@ if (!is_null($events['events'])) {
 			];
 			
 			
-			$url = 'https://api.line.me/v2/bot/richmenu';
 			
-			$data = [
-				"width" : 2500,
-				"height" : 1686,
-			],"selected": false,
-			"name": "rich",
-			"chatBarText": "Tap to open",
-			"areas":[{
-			"bounds":{
-				"x":0,
-				"y":0,
-				"width":2500,
-				"height":1686
-				
-			},
-				"action":{
-					"type":"postback",
-					"data":"action=buy&itemid=123"
-					
-				}
-			
-			}]
 			
 			
 			$post = json_encode($data);
