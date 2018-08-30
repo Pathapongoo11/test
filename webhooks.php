@@ -60,21 +60,21 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 			
-				"type"=> "flex",
-				  "altText"=> "This is a Flex Message",
-				  "contents"= {
-					"type"=> "bubble",
-					"body"= {
-					  "type"=> "box",
-					  "layout"=> "horizontal",
+							 "type": "flex",
+				  "altText": "This is a Flex Message",
+				  "contents": {
+					"type": "bubble",
+					"body": {
+					  "type": "box",
+					  "layout": "horizontal",
 					  "contents": [
 						{
-						  "type"=> "text",
-						  "text"=> "Hello,"
+						  "type": "text",
+						  "text": "Hello,"
 						},
 						{
-						  "type"=> "text",
-						  "text"=> "World!"
+						  "type": "text",
+						  "text": "World!"
 						}
 					  ]
 					}
@@ -83,26 +83,9 @@ if (!is_null($events['events'])) {
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
+			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-			 "altText"=> "This is a Flex Message",
-				  "contents"= {
-					"type"=> "bubble",
-					"body" {
-					  "type"=> "box",
-					  "layout"=> "horizontal",
-					  "contents"= [
-						{
-						  "type"=> "text",
-						  "text"=> "Hello,"
-						},
-						{
-						  "type"=> "text",
-						  "text"=> "World!"
-						}
-					  ]
-					}
-				  }
+			
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
