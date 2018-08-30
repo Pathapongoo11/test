@@ -4,8 +4,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='));
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('b3bf04eea8d9a4a0c7dc7404aa82e7ff')]);
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='));
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('a70984b67af018ded632c9559a8aeb2f')]);
 $signature = $_SERVER['HTTP_' . \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
 
 $events = $bot->parseEventRequest(file_get_contents('php://input'), $signature);
@@ -15,10 +15,10 @@ foreach ($events as $event) {
     if($event instanceof \LINE\LINEBot\Event\MessageEvent\TextMessage) {
 
       if($event->getText() === 'create') {
-        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(createNewRichmenu(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='))));
+        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(createNewRichmenu(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='))));
       }
       else if($event->getText() === 'list') {
-        $result = getListOfRichmenu(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='));
+        $result = getListOfRichmenu(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='));
 
         if(isset($result['richmenus']) && count($result['richmenus']) > 0) {
           $builders = new \LINE\LINEBot\MessageBuilder\MultiMessageBuilder();
@@ -58,19 +58,19 @@ foreach ($events as $event) {
         }
       }
       else if($event->getText() === 'unlink') {
-        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(unlinkFromUser(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='), $event->getUserId())));
+        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(unlinkFromUser(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='), $event->getUserId())));
       }
       else if($event->getText() === 'check') {
-        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(checkRichmenuOfUser(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='), $event->getUserId())));
+        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(checkRichmenuOfUser(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='), $event->getUserId())));
       }
       else if(substr($event->getText(),0, 8) === 'upload::') {
-        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(uploadRandomImageToRichmenu(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='), substr($event->getText(), 8))));
+        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(uploadRandomImageToRichmenu(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='), substr($event->getText(), 8))));
       }
       else if(substr($event->getText(),0, 8) === 'delete::') {
-        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(deleteRichmenu(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='), substr($event->getText(), 8))));
+        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(deleteRichmenu(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='), substr($event->getText(), 8))));
       }
       else if(substr($event->getText(),0, 6) === 'link::') {
-        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(linkToUser(getenv('8145ezxPErMoAuB01jrZ3s73V88Ha9hDVmbDy6p99EBPAIuaSKrvtFGqK4tSiCZbEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr63MPK4rK5FYW+/SPK0Ilx5TaNKECdsTfTkEkzKIgb3XlGUYhWQfeY8sLGRXgo3xvw='), $event->getUserId(), substr($event->getText(), 6))));
+        $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(linkToUser(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='), $event->getUserId(), substr($event->getText(), 6))));
       }
       else {
         $bot->replyMessage($event->getReplyToken(),new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(
