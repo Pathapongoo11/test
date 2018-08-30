@@ -62,9 +62,9 @@ if (!is_null($events['events'])) {
 			
 				"type"=> "flex",
 				  "altText"=> "This is a Flex Message",
-				  "contents": {
+				  "contents"= {
 					"type"=> "bubble",
-					"body": {
+					"body"= {
 					  "type"=> "box",
 					  "layout"=> "horizontal",
 					  "contents": [
@@ -86,12 +86,12 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 			 "altText"=> "This is a Flex Message",
-				  "contents": {
+				  "contents"= {
 					"type"=> "bubble",
-					"body": {
+					"body" {
 					  "type"=> "box",
 					  "layout"=> "horizontal",
-					  "contents": [
+					  "contents"= [
 						{
 						  "type"=> "text",
 						  "text"=> "Hello,"
