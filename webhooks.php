@@ -70,9 +70,7 @@ if (!is_null($events['events'])) {
 				  "contents",
 
 				      "type"=> "text",
-				      "text"=> "Hello,"
-				    ,
-
+				      "text"=> "Hello",
 				      "type"=> "text",
 				      "text"=> "World!"
 
