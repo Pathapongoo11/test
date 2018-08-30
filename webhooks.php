@@ -62,12 +62,12 @@ if (!is_null($events['events'])) {
 			$messages = [
 							 "type"=> "flex",
 				  "altText"=> "This is a Flex Message",
-				  "contents"= {
+				  "contents" : {
 					"type"=> "bubble",
-					"body"= {
+					"body" : {
 					  "type"=> "box",
 					  "layout"=> "horizontal",
-					  "contents"= [
+					  "contents" : [
 						{
 						  "type"=> "text",
 						  "text"=> "Hello,"
