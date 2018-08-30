@@ -60,26 +60,21 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 	
 			$messages1 = [
-							 "type"=> "flex",
-			      "altText"=> "This is a Flex Message",
-			      "contents",
-				"type"=> "bubble",
-				"body",
-				  "type"=> "box",
-				  "layout"=> "horizontal",
-				  "contents",
-
-				      "type"=> "text",
-				      "text"=> "Hello",
-				      "type"=> "text",
-				      "text"=> "World!"
+				
+				 "type": "button",
+ 
+				    "type": "uri",
+				    "label": "Tap me",
+				    "uri": "https://google.com",
+				    "style": "primary",
+ 			            "color": "#0000ff"
 
 			];
 
 				$url1 = 'https://api.line.me/v2/bot/message/push';
 							$data1 = [
 								'to' => "U052004ee1910a75874bcca55828e981f",
-								'messages' => [$messages1],
+								'action' => [$messages1],
 							];
 		
 			
