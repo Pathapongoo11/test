@@ -7,6 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw='));
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('a70984b67af018ded632c9559a8aeb2f')]);
 $signature = $_SERVER['HTTP_' . \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
+ $channelAccessToken = "XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw=";
 
 $events = $bot->parseEventRequest(file_get_contents('php://input'), $signature);
 foreach ($events as $event) {
@@ -86,8 +87,9 @@ foreach ($events as $event) {
     }
   }
 }
-$channelAccessToken = "XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw=";
 function createNewRichmenu($channelAccessToken) {
+  $channelAccessToken = "XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw=";
+
   $sh = <<< EOF
   curl -X POST \
   -H 'Authorization: Bearer $channelAccessToken' \
@@ -104,6 +106,8 @@ EOF;
 }
 
 function getListOfRichmenu($channelAccessToken) {
+   $channelAccessToken = "XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw=";
+
   $sh = <<< EOF
   curl \
   -H 'Authorization: Bearer $channelAccessToken' \
