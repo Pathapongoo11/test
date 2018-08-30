@@ -86,7 +86,7 @@ foreach ($events as $event) {
     }
   }
 }
-
+$channelAccessToken = "XXAXYGNcIogeHDYMP+fSZ3/j3L/IWi5BgMFHk1FFmOXROxRETkstzwcv9DTH4QwaEGTznnIj6498MIj7TiZzC2yPEW/Rg4D03t//SWkjVr7Clnwz+iqZVP2NLAYsEo2xg6P//TgCgvbLab250OqmqFGUYhWQfeY8sLGRXgo3xvw=";
 function createNewRichmenu($channelAccessToken) {
   $sh = <<< EOF
   curl -X POST \
