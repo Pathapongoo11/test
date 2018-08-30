@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 	
-			$messages = [
+			$messages1 = [
 							 "type"=> "flex",
 			      "altText"=> "This is a Flex Message",
 			      "contents",
@@ -76,18 +76,27 @@ if (!is_null($events['events'])) {
 
 			];
 
-				$url = 'https://api.line.me/v2/bot/message/push';
-							$data = [
+				$url1 = 'https://api.line.me/v2/bot/message/push';
+							$data1 = [
 								'to' => "U052004ee1910a75874bcca55828e981f",
-								'messages' => [$messages],
+								'messages' => [$messages1],
 							];
 		
 			
 			
 			
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$post1 = json_encode($data1);
+			$headers1 = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$ch1 = curl_init($url1);
+			curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch1, CURLOPT_POSTFIELDS, $post1);
+			curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers1);
+			curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
+			$result1 = curl_exec($ch1);
+			curl_close($ch1);
 
+			echo $result1 . "\r\n";
 			
 }
 echo "OK";
