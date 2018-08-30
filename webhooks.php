@@ -58,29 +58,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
 			
-							 "type": "flex",
-				  "altText": "This is a Flex Message",
-				  "contents": {
-					"type": "bubble",
-					"body": {
-					  "type": "box",
-					  "layout": "horizontal",
-					  "contents": [
-						{
-						  "type": "text",
-						  "text": "Hello,"
-						},
-						{
-						  "type": "text",
-						  "text": "World!"
-						}
-					  ]
-					}
-				  }
-				
-			];
 
 		
 			
