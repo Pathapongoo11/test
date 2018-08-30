@@ -66,9 +66,7 @@ if (!is_null($events['events'])) {
 				  "type"=> "box",
 				 "layout"=> "horizontal",
 				 "type"=> "text",
-             			 "text"=> "Hello",
-				"type"=> "text",
-              			"text"=> "World!"
+             			 "text"=> "Hello"
 			];
 
 				$url = 'https://api.line.me/v2/bot/message/push';
