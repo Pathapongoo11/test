@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 
 				$url = 'https://api.line.me/v2/bot/message/push';
 							$data = [
-								'to' => $replyToken,
+								'to' => "U052004ee1910a75874bcca55828e981f",
 								'messages' => [$messages],
 							];
 		
