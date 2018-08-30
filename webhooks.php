@@ -61,8 +61,14 @@ if (!is_null($events['events'])) {
 	
 			$messages = [
 				 "type"=> "flex",
-				  "altText"=> "This is a Flex Message"
-				 
+				  "altText"=> "This is a Flex Message",
+				  "type"=> "bubble",
+				  "type"=> "box",
+				 "layout"=> "horizontal",
+				 "type"=> "text",
+             			 "text"=> "Hello",
+				"type": "text",
+              			"text": "World!"
 			];
 
 				$url = 'https://api.line.me/v2/bot/message/push';
