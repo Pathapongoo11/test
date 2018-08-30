@@ -56,21 +56,21 @@ if (!is_null($events['events'])) {
 $replyToken = $event['replyToken'];
 		$messages = [
 		
-				"type": "flex",
-					  "altText": "This is a Flex Message",
-					  "contents": {
-						"type": "bubble",
-						"body": {
-						  "type": "box",
-						  "layout": "horizontal",
-						  "contents": [
+				"type"=> "flex",
+					  "altText"=> "This is a Flex Message",
+					  "contents"=> {
+						"type"=> "bubble",
+						"body"=> {
+						  "type"=> "box",
+						  "layout"=> "horizontal",
+						  "contents"=> [
 							{
-							  "type": "text",
-							  "text": "Hello,"
+							  "type"=> "text",
+							  "text"=> "Hello,"
 							},
 							{
-							  "type": "text",
-							  "text": "World!"
+							  "type"=> "text",
+							  "text"=> "World!"
 							}
 						  ]
 						}
@@ -81,22 +81,22 @@ $replyToken = $event['replyToken'];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
 			
-					"type": "flex",
+					"type"=> "flex",
 					'replyToken' => $replyToken,
-					  "altText": "This is a Flex Message",
-					  "contents": {
-						"type": "bubble",
-						"body": {
-						  "type": "box",
-						  "layout": "horizontal",
-						  "contents": [
+					  "altText"=> "This is a Flex Message",
+					  "contents"=> {
+						"type"=> "bubble",
+						"body"=> {
+						  "type"=> "box",
+						  "layout"=> "horizontal",
+						  "contents"=> [
 							{
-							  "type": "text",
-							  "text": "Hello,"
+							  "type"=> "text",
+							  "text"=> "Hello,"
 							},
 							{
-							  "type": "text",
-							  "text": "World!"
+							  "type"=> "text",
+							  "text"=> "World!"
 							}
 						  ]
 						}
