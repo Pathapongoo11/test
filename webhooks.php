@@ -59,10 +59,37 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 	
-			$messages1 = array("type"=>"flex",
-	"altText"=>"This is a Flex",
-	"contetns" => array("type"=>"bubble", "body"=>array("type"=>"box","layout"=>"horizontal","contents"=>array(0=>array("type"=>"text","text"=>"Hello")))));
-
+			$messages1 = array ('messages' => 
+					  array (
+					    0 => 
+					    array (
+					      'type' => 'flex',
+					      'altText' => 'This is a Flex Message',
+					      'contents' => 
+					      array (
+						'type' => 'bubble',
+						'body' => 
+						array (
+						  'type' => 'box',
+						  'layout' => 'horizontal',
+						  'contents' => 
+						  array (
+						    0 => 
+						    array (
+						      'type' => 'text',
+						      'text' => 'Hello,',
+						    ),
+						    1 => 
+						    array (
+						      'type' => 'text',
+						      'text' => 'World!',
+						    ),
+						  ),
+						),
+					      ),
+					    ),
+					  ),
+					);
   
 		
 
