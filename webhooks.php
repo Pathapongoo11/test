@@ -69,15 +69,8 @@ if (!is_null($events['events'])) {
 				$url1 = 'https://api.line.me/v2/bot/message/push';
 							$data1 = [
 								"to" => "U052004ee1910a75874bcca55828e981f",
-								"type"=> "flex",
-							        "altText"=> "This is a Flex Message",
-							       
-								 "type"=> "bubble",
-								 
-								    "type"=> "box",
-        								  "layout"=> "horizontal",
-								
-								 "type"=> "text",
+							
+								 "type"=> "flex",
              						         "text"=> "Hello,"
 							
 								
