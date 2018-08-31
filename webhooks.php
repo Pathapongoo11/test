@@ -62,7 +62,7 @@ if (!is_null($events['events'])) {
 			$messages1 = [
 				
 				
- 			            "text"=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua.",
+ 			            "text"=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua."
 					
 			];
 
