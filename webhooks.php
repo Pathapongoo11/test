@@ -61,13 +61,13 @@ if (!is_null($events['events'])) {
 	
 			$messages1 = [
 				
-				 "type": "button",
+				 "type"=> "button",
  
-				    "type": "uri",
-				    "label": "Tap me",
-				    "uri": "https://google.com",
-				    "style": "primary",
- 			            "color": "#0000ff"
+				    "type"=> "uri",
+				    "label"=> "Tap me",
+				    "uri"=> "https://google.com",
+				    "style"=> "primary",
+ 			            "color"=> "#0000ff"
 
 			];
 
