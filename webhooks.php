@@ -68,16 +68,14 @@ if (!is_null($events['events'])) {
 
 				$url1 = 'https://api.line.me/v2/bot/message/multicast';
 							$data1 = [
-								'to' => "U052004ee1910a75874bcca55828e981f",
+								"to" => "U052004ee1910a75874bcca55828e981f",
 								 "type"=> "bubble",
 								"body",
-								
- 				
 								    "type"=> "box",
 								    "layout"=> "horizontal",
 								    "contents",
 								    "type"=> "text",
-								'message' => [$messages1]
+								"message" => [$messages1],
 								"wrap"=> true
 								
 							];
