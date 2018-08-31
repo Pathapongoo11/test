@@ -78,9 +78,8 @@ if (!is_null($events['events'])) {
         								  "layout"=> "horizontal",
 								
 								 "type"=> "text",
-             						         "text"=> "Hello,",
-								 "type"=> "text",
-             							 "text"=> "World!"
+             						         "text"=> "Hello,"
+							
 								
 							];
 		
