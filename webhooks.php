@@ -59,19 +59,21 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 	
-		/*	$messages1 = [
+			$messages1 = [
 				
-				
- 			            "text"=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua."
-					
-			];*/
+	"type"=>"flex",
+	"altText"=>"This is a Flex",
+	"contetns" => array("type"=>"bubble", "body"=>array("type"=>"box","layout"=>"horizontal","contents"=>array("type"=>"text","text"=>"Hello")
+							   )
+			   )
+		
+  
+			];
 
 				$url1 = 'https://api.line.me/v2/bot/message/push';
 							$data1 = [
 								"to" => "U052004ee1910a75874bcca55828e981f",
-							
-								 "type"=> "flex",
-             						         "text"=> "Hello,"
+								"messages" => $messages1
 							
 								
 							];
