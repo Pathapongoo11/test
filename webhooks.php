@@ -63,8 +63,15 @@ if (!is_null($events['events'])) {
 				
 	"type"=>"flex",
 	"altText"=>"This is a Flex",
-	"contetns" => array("type"=>"bubble", "body"=>array("type"=>"box","layout"=>"horizontal","contents"=>array("type"=>"text","text"=>"Hello")
-							   )
+	"contetns" => array("type"=>"bubble", 
+			    "body"=>array(
+				    "type"=>"box",
+				    "layout"=>"horizontal",
+				    "contents"=>array(
+					    "type"=>"text",
+					    "text"=>"Hello"
+				    )
+				)
 			   )
 		
   
@@ -73,7 +80,7 @@ if (!is_null($events['events'])) {
 				$url1 = 'https://api.line.me/v2/bot/message/push';
 							$data1 = [
 								"to" => "U052004ee1910a75874bcca55828e981f",
-								"messages" => $messages1
+								"22222" => $messages1
 							
 								
 							];
