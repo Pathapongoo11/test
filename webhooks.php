@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 	
-			$messages1 = [
+			$messages1 = array(
 				
 	"type"=>"flex",
 	"altText"=>"This is a Flex",
@@ -68,7 +68,7 @@ if (!is_null($events['events'])) {
 			   )
 		
   
-			];
+			);
 
 				/*$url1 = 'https://api.line.me/v2/bot/message/push';
 							$data1 = [
