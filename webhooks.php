@@ -96,12 +96,7 @@ if (!is_null($events['events'])) {
 		
 
 				$url1 = 'https://api.line.me/v2/bot/message/push';
-							$data1 = [
-								
-								 $messages1
-							
-								
-							];
+							$data1 = $messages1;
 		
 			
 			
