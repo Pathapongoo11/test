@@ -59,9 +59,11 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 	
-			$messages1 = array ('messages' => 
-					
-					    
+			$messages1 = array (
+					  'to' => 'U4af4980629...',
+					  'messages' => 
+					  array (
+					    0 => 
 					    array (
 					      'type' => 'flex',
 					      'altText' => 'This is a Flex Message',
@@ -88,14 +90,14 @@ if (!is_null($events['events'])) {
 						),
 					      ),
 					    ),
-					
+					  ),
 					);
   
 		
 
 				$url1 = 'https://api.line.me/v2/bot/message/push';
 							$data1 = [
-								"to" => "U052004ee1910a75874bcca55828e981f",
+								
 								 $messages1
 							
 								
