@@ -71,14 +71,14 @@ if (!is_null($events['events'])) {
 								"to" => "U052004ee1910a75874bcca55828e981f",
 								"type"=> "flex",
 							        "altText"=> "This is a Flex Message",
-							        "contents",
+							       
 								 "type"=> "bubble",
-								 "body",
+								 
 								    "type"=> "box",
         								  "layout"=> "horizontal",
-								"contents",
+								
 								 "type"=> "text",
-             								 "text"=> "Hello,",
+             						         "text"=> "Hello,",
 								 "type"=> "text",
              							 "text"=> "World!"
 								
