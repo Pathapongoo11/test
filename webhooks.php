@@ -60,7 +60,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 	
 			$messages1 = array ('messages' => 
-					  array (
+					
 					    
 					    array (
 					      'type' => 'flex',
@@ -88,7 +88,7 @@ if (!is_null($events['events'])) {
 						),
 					      ),
 					    ),
-					  ),
+					
 					);
   
 		
