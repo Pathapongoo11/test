@@ -81,7 +81,7 @@ if (!is_null($events['events'])) {
 			
 			
 			
-			echo $post1 = json_encode($data1);
+			echo $post1 = json_encode($messages1);
 			$headers1 = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch1 = curl_init($url1);
 			curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "POST");
