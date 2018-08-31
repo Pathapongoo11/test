@@ -61,20 +61,25 @@ if (!is_null($events['events'])) {
 	
 			$messages1 = [
 				
-				 "type"=> "button",
- 
-				    "type"=> "uri",
-				    "label"=> "Tap me",
-				    "uri"=> "https://google.com",
-				    "style"=> "primary",
- 			            "color"=> "#0000ff"
-
+				 "type"=> "bubble",
+ 				"body",
+				    "type"=> "box",
+				    "layout"=> "horizontal",
+				    "contents",
+				    "type"=> "text",
+ 			            "text"=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua.",
+					"wrap": true
 			];
 
-				$url1 = 'https://api.line.me/v2/bot/message/push';
+				$url1 = 'https://api.line.me/v2/bot/message/multicast';
 							$data1 = [
 								'to' => "U052004ee1910a75874bcca55828e981f",
 								'message' => [$messages1],
+								"type" => "bubble",
+								"body",
+								"type" => "box",
+								"layout" => "horizontal"
+								
 							];
 		
 			
