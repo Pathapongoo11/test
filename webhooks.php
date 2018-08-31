@@ -68,12 +68,17 @@ if (!is_null($events['events'])) {
 				    
 				    "type"=> "text",
  			            "text"=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\n tempor incididunt ut labore et dolore magna aliqua.",
-					"wrap": true
+					"wrap"=> true
 			];
 
 				$url1 = 'https://api.line.me/v2/bot/message/multicast';
 							$data1 = [
 								'to' => "U052004ee1910a75874bcca55828e981f",
+								"type"=> "bubble",
+								      "body",
+									"type"=> "box",
+									"layout"=> "horizontal",
+									"contents",
 								'message' => [$messages1]
 								
 							];
