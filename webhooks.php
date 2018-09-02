@@ -50,9 +50,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}
-	}
-}else{
+		}else{
 		$text = $event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
@@ -60,7 +58,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 	
 			$messages1 = array (
-					  'to' => $text,
+					  'to' => $replyToken,
 					  'messages' => 
 					  array (
 					    0 => 
@@ -114,5 +112,7 @@ if (!is_null($events['events'])) {
 
 			echo $result1 . "\r\n";
 			
+            }
+	}
 }
 echo "OK";
