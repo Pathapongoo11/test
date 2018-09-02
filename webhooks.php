@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 	
 			$messages1 = array (
-					  'to' => $replyToken,
+					  'to' => $text,
 					  'messages' => 
 					  array (
 					    0 => 
