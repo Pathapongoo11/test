@@ -43,16 +43,14 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 			echo $result . "\r\n";
-		}
-	}
-}else{
+		}else{
 		$text = $event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
 	
 			$messages1 = array (
-					  'to' => 'U052004ee1910a75874bcca55828e981f',
+					  'to' => $text,
 					  'messages' => 
 					  array (
 					    0 => 
@@ -104,5 +102,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch1);
 			echo $result1 . "\r\n";
 			
+                }
+	}
 }
 echo "OK";
