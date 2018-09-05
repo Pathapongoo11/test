@@ -106,3 +106,4 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK";
+echo $post1 = json_encode($data1);
